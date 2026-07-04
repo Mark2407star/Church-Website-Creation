@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offering & Giving — Living Word A.G Church</title>
+<meta name="description" content="Give your tithes and offerings to Living Word A.G Church securely via UPI QR code or bank transfer.">
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="mesh"><span class="m1"></span><span class="m2"></span><span class="m3"></span><span class="m4"></span></div>
+<div class="grain"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.svg" alt="" class="brand-mark spin-slow" style="animation-duration:40s;">
+      <span class="brand-text">Living Word A.G Church<small>Besant Nagar · Chennai</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="offering.html">Offering</a>
+      <a href="prayer.html">Prayer Request</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="offering.html" class="btn btn-primary"><span class="long">Give&nbsp;</span>Online</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs reveal in"><a href="index.html">Home</a> <span>/</span> <span>Offering</span></div>
+    <h1 class="reveal in">Sow with a <span class="text-gradient">cheerful heart</span></h1>
+    <p class="lede reveal in" style="margin-left:auto;margin-right:auto;">
+      Your tithes and offerings help sustain our ministries, our building and our outreach to the community.
+      Thank you for giving faithfully.
+    </p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="glass glass-card glass-top-accent reveal" style="--accent:var(--grad-warm); text-align:center; max-width:760px; margin:0 auto;">
+      <span class="eyebrow" style="justify-content:center;">The heart of giving</span>
+      <p class="verse">"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver."</p>
+      <span class="verse-ref">— 2 Corinthians 9:7</span>
+    </div>
+  </div>
+</section>
+
+<!-- GIVING OPTIONS -->
+<section class="section">
+  <div class="wrap grid grid-2" style="align-items:stretch; gap:32px;">
+
+    <!-- UPI / QR -->
+    <div class="glass glass-card glass-top-accent reveal" style="--accent:var(--grad-hero);">
+      <span class="eyebrow">Scan &amp; pay</span>
+      <h3 style="font-size:22px; margin-bottom:6px;">Give via UPI</h3>
+      <p style="color:var(--muted); font-size:14.5px; margin-bottom:22px;">Scan this QR with any UPI app — Google Pay, PhonePe, Paytm, BHIM or your bank's app.</p>
+
+      <div style="display:flex; justify-content:center; margin-bottom:20px;">
+        <div style="background:#fff; padding:18px; border-radius:20px; box-shadow:0 14px 40px -12px rgba(255,92,168,0.5);">
+          <div id="upiQR"></div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-bottom:18px;">
+        <div class="pill" style="justify-content:center;"><span class="dot"></span> UPI ID: <strong style="color:var(--text); margin-left:4px;">Vincepastor76@okicici</strong></div>
+      </div>
+
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+        <button class="btn btn-ghost" data-copy="Vincepastor76@okicici">📋 Copy UPI ID</button>
+        <a id="upiPayLink" class="btn btn-primary" href="#">Pay with UPI App</a>
+      </div>
+      <p class="form-note" style="text-align:center; margin-top:14px;">"Pay with UPI App" opens directly in your UPI app on mobile devices.</p>
+    </div>
+
+    <!-- BANK TRANSFER -->
+    <div class="glass glass-card glass-top-accent reveal reveal-delay-1" style="--accent:var(--grad-cool);">
+      <span class="eyebrow">Direct transfer</span>
+      <h3 style="font-size:22px; margin-bottom:6px;">Give via Bank Transfer</h3>
+      <p style="color:var(--muted); font-size:14.5px; margin-bottom:22px;">Prefer NEFT / IMPS / RTGS? Use the account details below.</p>
+
+      <div style="display:grid; gap:14px;">
+        <div class="divider" style="margin:0;"></div>
+        <div style="display:flex; justify-content:space-between; gap:12px;">
+          <span style="color:var(--muted); font-size:14px;">Account Name</span>
+          <strong>Living Word A.G Church</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:12px;">
+          <span style="color:var(--muted); font-size:14px;">Account Number</span>
+          <strong id="acctNo">XXXX&nbsp;XXXX&nbsp;XXXX</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:12px;">
+          <span style="color:var(--muted); font-size:14px;">IFSC Code</span>
+          <strong id="ifsc">ICIC0XXXXXX</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:12px;">
+          <span style="color:var(--muted); font-size:14px;">Bank &amp; Branch</span>
+          <strong>ICICI Bank</strong>
+        </div>
+        <div class="divider" style="margin:0;"></div>
+      </div>
+
+      <div style="background:rgba(255,200,87,0.1); border:1px solid rgba(255,200,87,0.3); border-radius:14px; padding:14px 16px; margin-top:18px; font-size:13.5px; color:var(--amber);">
+        ⚠️ Placeholder details — the church admin should replace the Account Number and IFSC above with the
+        real church bank account before publishing this site.
+      </div>
+
+      <div style="margin-top:20px; text-align:center;">
+        <a href="contact.html" class="btn btn-ghost">Have questions? Contact us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="glass glass-card reveal" style="text-align:center;">
+      <p style="color:var(--muted); font-size:14px;">Every gift is used to sustain worship, discipleship, outreach and the care of our congregation. Thank you for partnering with us. 🙏</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <img src="assets/images/logo.svg" alt="" class="brand-mark">
+          <span class="brand-text">Living Word A.G Church</span>
+        </div>
+        <p style="color:var(--muted); font-size:14px; max-width:320px;">1st Cross Street, Thiruvalluvar Nagar, Besant Nagar, Chennai – 600 090</p>
+        <div class="social-row" style="margin-top:18px;">
+          <a href="https://www.youtube.com/@livingworda.gchurch9092" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+          <a href="https://www.instagram.com/lwag_church_besantnagar/" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+          <a href="mailto:lwagchurch98@gmail.com" aria-label="Email">✉</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="prayer.html">Prayer Request</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919840306113">+91 98403 06113</a></li>
+          <li><a href="mailto:lwagchurch98@gmail.com">lwagchurch98@gmail.com</a></li>
+          <li><a href="offering.html">Give Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Living Word A.G Church, Besant Nagar. All rights reserved.</span>
+      <span>Built with faith &amp; care 🕊️</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  (function(){
+    var upiId = "Vincepastor76@okicici";
+    var payeeName = "Living Word A.G Church";
+    var upiUrl = "upi://pay?pa=" + encodeURIComponent(upiId) +
+                 "&pn=" + encodeURIComponent(payeeName) +
+                 "&cu=INR" +
+                 "&tn=" + encodeURIComponent("Offering - 2 Corinthians 9:7");
+
+    document.getElementById('upiPayLink').setAttribute('href', upiUrl);
+
+    if (window.QRCode) {
+      new QRCode(document.getElementById("upiQR"), {
+        text: upiUrl,
+        width: 220,
+        height: 220,
+        colorDark: "#07070f",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    }
+  })();
+</script>
+</body>
+</html>

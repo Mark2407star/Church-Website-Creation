@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pastor Admin — Living Word A.G Church</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="mesh"><span class="m1"></span><span class="m2"></span><span class="m3"></span><span class="m4"></span></div>
+<div class="grain"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.svg" alt="" class="brand-mark">
+      <span class="brand-text">Living Word A.G Church<small>Pastor's Private Area</small></span>
+    </a>
+    <div class="nav-cta">
+      <a href="index.html" class="btn btn-ghost">← Back to Site</a>
+    </div>
+  </div>
+</header>
+
+<!-- LOGIN GATE -->
+<section class="section" id="adminGate">
+  <div class="wrap" style="max-width:440px;">
+    <div class="glass glass-card glass-top-accent reveal in" style="--accent:var(--grad-hero); text-align:center;">
+      <div style="font-size:34px; margin-bottom:10px;">🔒</div>
+      <span class="eyebrow" style="justify-content:center;">Restricted access</span>
+      <h1 style="font-size:26px; margin-bottom:8px;">Pastor Login</h1>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:26px;">This area is private and intended only for the pastor to review prayer requests.</p>
+
+      <form id="loginForm">
+        <div class="field" style="text-align:left;">
+          <label for="adminPass">Admin Password</label>
+          <input type="password" id="adminPass" placeholder="Enter password" required>
+        </div>
+        <p id="loginError" style="display:none; color:var(--magenta); font-size:13.5px; margin-bottom:14px;">Incorrect password. Please try again.</p>
+        <button type="submit" class="btn btn-primary btn-block">Unlock Dashboard</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="section" id="adminDash" style="display:none;">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:36px;">
+      <div>
+        <span class="eyebrow">Pastor's dashboard</span>
+        <h1 style="font-size:clamp(24px,3vw,32px);">Prayer Requests <span class="text-gradient">(<span id="reqCount">0</span>)</span></h1>
+      </div>
+      <button id="logoutBtn" class="btn btn-ghost">Log Out</button>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:24px;">
+      <div class="field" style="margin:0; min-width:220px;">
+        <label for="statusFilter">Filter</label>
+        <select id="statusFilter">
+          <option value="all">All requests</option>
+          <option value="new">New only</option>
+          <option value="prayed">Prayed only</option>
+        </select>
+      </div>
+      <button id="clearAllBtn" class="btn btn-ghost">🗑 Clear All Requests</button>
+    </div>
+
+    <div id="requestList"></div>
+
+    <div class="glass glass-card reveal in" id="emptyState" style="display:none; text-align:center;">
+      <div style="font-size:34px; margin-bottom:10px;">🕊️</div>
+      <h3 style="font-size:19px; margin-bottom:8px;">No prayer requests yet</h3>
+      <p style="color:var(--muted); font-size:14px;">Submitted requests from the public Prayer Request page will appear here.</p>
+    </div>
+
+    <div class="glass glass-card reveal in" style="margin-top:40px; font-size:13.5px; color:var(--muted-2);">
+      ℹ️ Requests are stored privately in this browser only. If you check from a different device or
+      browser, you won't see requests submitted elsewhere. For a shared inbox across devices, this
+      dashboard can be connected to a backend (Google Sheets, Firebase, or email) later on.
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
